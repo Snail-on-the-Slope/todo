@@ -1,0 +1,185 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+// Main.vue
+.filter-container {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin: 2% auto;
+    .filter-completed select,
+    input[type="text"] {
+        height: 25px;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+    }
+}
+
+.dd-first-group {
+    overflow-y: auto;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.dd-result-group {
+    overflow: auto;
+    white-space: nowrap;
+    margin-bottom: 3%;
+    .dd-drop-container {
+        display: inline-block;
+        vertical-align: top;
+        width: 250px;
+        padding: 10px;
+        margin: 5px;
+        min-height: 5em;
+        margin-right: 10px;
+        white-space: normal;
+        background-color: #f3f3f3;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+        .dd-drop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+            h2 {
+                font-size: 18px;
+            }
+            .delete {
+                border: none;
+                color: white;
+                border-radius: 5px;
+                background-color: #db5c5c;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.card {
+    margin: 5px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+    padding: 10px;
+}
+
+// CustomCard.vye
+.card-item {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: white;
+    width: 87%;
+    max-width: 225px;
+    font-size: 0.8em;
+    h3 {
+        margin: 0px;
+    }
+    .description-text {
+        max-height: 130px;
+        overflow-y: auto;
+        .description-first,
+        .description-more {
+            display: flex;
+            align-items: center;
+            .btn-more,
+            .btn-less {
+                width: 29px;
+                height: 20px;
+                background-color: #f3f3f3;
+                border: 1px solid #dbdbdb;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                &:hover {
+                    background-color: #b3b3b3;
+                }
+            }
+            .btn-less {
+                margin-left: 10px;
+            }
+        }
+        .description-first {
+            p {
+                margin-bottom: 0;
+            }
+        }
+        .description-more {
+            align-items: flex-end;
+            p {
+                margin: 0;
+            }
+        }
+        p {
+            margin-right: 5px;
+        }
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3%;
+        .btn {
+            background-color: #d9db5c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete {
+            background-color: #db5c5c;
+        }
+        .done {
+            background-color: #5cdb95;
+        }
+    }
+}
+
+// CreateTask.vue CreateGroup.vue
+.create,
+.create-task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin: 2% auto;
+    input[type="text"] {
+        width: 80%;
+        height: 30px;
+        padding: 5px;
+        margin: 0 auto;
+        margin-bottom: 3%;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+    }
+    button {
+        width: 30%;
+        height: 40px;
+        margin: 0 auto;
+        background-color: #5cdb95;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    small {
+        margin: -10px 0 10px 10%;
+        text-align: left;
+    }
+    .invalid {
+        color: #f44336;
+        background-color: rgba(244, 67, 54, 0.1);
+    }
+    .helper-text {
+        background-color: #fff;
+    }
+}

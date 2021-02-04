@@ -1,4 +1,6 @@
-# todo-app
+DEMO: https://snail-on-the-slope.github.io/todo/
+
+# todo
 
 ## Project setup
 ```
